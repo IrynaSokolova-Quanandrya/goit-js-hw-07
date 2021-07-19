@@ -32,7 +32,7 @@ const makeImagesList = images.reduce(
 
    listGalleryEl.insertAdjacentHTML('afterbegin', makeImagesList); 
   
-
+return listGalleryEl;
    
   };
  
