@@ -13,28 +13,12 @@ const images = [
   },
 ];
 
+let list = ``;
+images.forEach(image => {
+  list += `<li><img src="${image.url}" alt="${image.alt}"></li>`
+});
+const listEl = document.querySelector('#gallery');
+listEl.insertAdjacentHTML('afterbegin',list); 
 
 
-function createGalleryList(images){
-
-const listGalleryEl = document.querySelector('#gallery');
-
-const makeImagesList = images.reduce(
-  (image, item) => 
-  image + `<li>
-  <img class="gallary__image" 
-  src='${item.url}' 
-  alt='${item.alt}' 
-  width=320 
-  </li>`,
-  "")
-
-
-   listGalleryEl.insertAdjacentHTML('afterbegin', makeImagesList); 
-  
-return listGalleryEl;
-   
-  };
- 
-
- console.log(listGalleryEl);
+/*Done */

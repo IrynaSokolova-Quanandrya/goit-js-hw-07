@@ -1,4 +1,4 @@
-/*Done*/
+
 
 const counter = {
     value: 0,
@@ -27,3 +27,5 @@ incrementBtn.addEventListener('click', function(){
     counterValue.textContent = counter.value;
 
 });
+
+/*Done*/
