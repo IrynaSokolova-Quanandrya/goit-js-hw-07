@@ -2,12 +2,15 @@
 
 const inputValidEl = document.querySelector('#validation-input');
 console.log(inputValidEl);
+const dataLength = Number (inputValidEl.dataset.length);
 
-inputValidEl.addEventListener('blur', () => {
+inputValidEl.addEventListener('blur', inputLengthLimiter);
+
+function inputLengthLimiter () {
     const inputLength = inputValidEl.value.length;
-    const dataLength = Number (inputValidEl.dataset.length)
-inputLength <= dataLength ? inputValidEl.className = 'valid' : inputValidEl.className = 'invalid'; 
-})
+    
+    inputLength === dataLength ? inputValidEl.className = 'valid' : inputValidEl.className = 'invalid'; 
+};
 
 /*Done */
 
